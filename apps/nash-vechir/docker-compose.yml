@@ -1,8 +1,8 @@
 services:
   nash-vechir:
-    # Built locally on the server (see the app README) — never pulled from a registry.
-    image: nash-vechir:1.0.0
-    pull_policy: never
+    # Built on the server and pushed to a registry bound to 127.0.0.1 (see the app README).
+    # Runtipi removes the image on install/update, so it must be pullable from there.
+    image: 127.0.0.1:5000/nash-vechir:1.0.0
     restart: unless-stopped
     environment:
       - PASSWORD_MAKSYM=${NV_PASSWORD_MAKSYM}
