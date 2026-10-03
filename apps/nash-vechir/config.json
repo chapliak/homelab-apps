@@ -20,14 +20,18 @@
     {
       "type": "password",
       "label": "Пароль Максима",
-      "min": 8,
+      "min": 6,
+      "regex": "^[0-9]{6,}$",
+      "pattern_error": "Тільки цифри, мінімум 6",
       "required": true,
       "env_variable": "NV_PASSWORD_MAKSYM"
     },
     {
       "type": "password",
       "label": "Пароль Люди",
-      "min": 8,
+      "min": 6,
+      "regex": "^[0-9]{6,}$",
+      "pattern_error": "Тільки цифри, мінімум 6",
       "required": true,
       "env_variable": "NV_PASSWORD_LIUDA"
     },
