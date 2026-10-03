@@ -1,0 +1,77 @@
+{
+  "name": "Наш вечір",
+  "id": "nash-vechir",
+  "available": true,
+  "short_desc": "Private planner for two.",
+  "author": "private",
+  "port": 8473,
+  "categories": ["utilities"],
+  "description": "A small private planner for two people. Local image, no external services except optional Telegram notifications.",
+  "tipi_version": 1,
+  "version": "1.0.0",
+  "source": "local",
+  "exposable": false,
+  "dynamic_config": true,
+  "supported_architectures": ["amd64", "arm64"],
+  "created_at": 1790000000000,
+  "updated_at": 1790000000000,
+  "min_tipi_version": "4.5.0",
+  "form_fields": [
+    {
+      "type": "password",
+      "label": "Пароль Максима",
+      "min": 8,
+      "required": true,
+      "env_variable": "NV_PASSWORD_MAKSYM"
+    },
+    {
+      "type": "password",
+      "label": "Пароль Люди",
+      "min": 8,
+      "required": true,
+      "env_variable": "NV_PASSWORD_LIUDA"
+    },
+    {
+      "type": "text",
+      "label": "App URL (Tailscale address you open in the browser)",
+      "hint": "e.g. https://thinkcentre.your-tailnet.ts.net:8443/love_sched or http://100.x.y.z:8473",
+      "required": true,
+      "env_variable": "NV_APP_URL"
+    },
+    {
+      "type": "password",
+      "label": "Telegram bot token (from @BotFather)",
+      "required": false,
+      "env_variable": "NV_TELEGRAM_BOT_TOKEN"
+    },
+    {
+      "type": "text",
+      "label": "Telegram chat ID — Максим",
+      "hint": "Send /start to your bot to get it",
+      "required": false,
+      "env_variable": "NV_TELEGRAM_CHAT_ID_MAKSYM"
+    },
+    {
+      "type": "text",
+      "label": "Telegram chat ID — Люда (optional)",
+      "required": false,
+      "env_variable": "NV_TELEGRAM_CHAT_ID_WIFE"
+    },
+    {
+      "type": "number",
+      "label": "Reminder, hours before (0 = off)",
+      "default": "3",
+      "min": 0,
+      "max": 48,
+      "required": false,
+      "env_variable": "NV_REMINDER_HOURS"
+    },
+    {
+      "type": "text",
+      "label": "Time zone",
+      "default": "America/Toronto",
+      "required": false,
+      "env_variable": "NV_APP_TIMEZONE"
+    }
+  ]
+}
