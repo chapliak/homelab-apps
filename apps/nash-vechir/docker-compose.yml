@@ -2,7 +2,7 @@ services:
   nash-vechir:
     # Built on the server and pushed to a registry bound to 127.0.0.1 (see the app README).
     # Runtipi removes the image on install/update, so it must be pullable from there.
-    image: 127.0.0.1:5000/nash-vechir:1.1.0
+    image: 127.0.0.1:5000/nash-vechir:1.1.1
     restart: unless-stopped
     environment:
       - PASSWORD_MAKSYM=${NV_PASSWORD_MAKSYM}
